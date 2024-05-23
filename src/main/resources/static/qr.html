@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>使用浏览器zing生成普通的黑白二维码</h1>
+
+<hr/><br>
+    请输入文本内用<input type="text" id="url"><button onclick="generateQRcode()">生成二维码</button><br>
+<hr/><br>
+<hr/><br>
+
+<img src="" id="qrcodeImg" />
+<script >
+  function generateQRcode(){
+    let url = document.getElementById("url").value;
+    //设置img标签的scr属性
+    let qrcodeImg = document.getElementById("qrcodeImg");
+    // qrcodeImg.src = "/myqrcode/generate?url="+url;
+      qrcodeImg.src = "/generate?url="+url;
+  }
+</script>
+</body>
+</html>
